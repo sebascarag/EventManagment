@@ -17,8 +17,8 @@ Run intialization process:
 ```
 
 ## Run Angular project
-* First get API localhost url from the running backend
-* Set this value on the constant API_URL, inside in next path
+* First get localhost API url from running backend
+* Set this value to the API_URL constant, inside the following path
 ```
 ...\src\app\shared\constants\api-url.constant.ts
 ```
