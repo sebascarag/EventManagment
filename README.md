@@ -11,7 +11,7 @@ Run intialization process:
  * Migrations will be applied
  * And seed data will be inserted
 	
-> Note: if you don't want this approach, go to program.cs in RealEstate.Api project and comment this line:
+> Note: if you don't want this approach, go to program.cs in EventManagment.Api project and comment this line:
 ```csharp
    await app.InitializeDatabaseAsync();
 ```
