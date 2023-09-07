@@ -1,0 +1,16 @@
+<div *ngIf="optionsValues.length === 0;else dropDown">
+  <input
+    [type]="inputType"
+    class="form-control"
+    [placeholder]="placeholder"
+    (change)="emitValue( txtInput.value )"
+    #txtInput
+  >
+</div>
+
+<ng-template #dropDown>
+  <select #dpSelect (change)="emitValue(dpSelect.value)" class="form-select" aria-label="select search-box">
+    <option selected value="">-- Select --</option>
+    <option *ngFor="let item of optionsValues" value="{{item.value}}">{{item.option}}</option>
+  </select>
+</ng-template>

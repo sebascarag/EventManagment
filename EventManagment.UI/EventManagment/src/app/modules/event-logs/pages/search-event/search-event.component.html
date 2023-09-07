@@ -1,0 +1,31 @@
+<h2>Event Logs</h2>
+<hr>
+<div class="row">
+  <div class="col-10">
+    <div #searchBy>
+      <div class="row">
+        <div class="col-3">
+          <label for="date" class="col-form-label">Start Date</label>
+          <shared-search-box placeholder="Min. Date" inputType="date" (onValue)="addSearchParam('startDate', $event)"></shared-search-box>
+          <span id="addressHelpInline" class="form-text text-danger" *ngIf="errorDate">
+            Must select a start date.
+          </span>
+        </div>
+        <div class="col-3">
+          <label for="date" class="col-form-label">End Date</label>
+          <shared-search-box placeholder="Max. Date" inputType="date" (onValue)="addSearchParam('endDate', $event)"></shared-search-box>
+        </div>
+        <div class="col-3">
+          <label for="date" class="col-form-label">Type</label>
+          <shared-search-box placeholder="Type" [optionsValues]="options" (onValue)="addSearchParam('eType', $event)"></shared-search-box>
+        </div>
+        <div class="col-3">
+          <button class="btn btn-secondary" (click)="search()">Search</button>
+          <a class="btn btn-primary float-end" [routerLink]="[ '../add']" >Add Event</a>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <event-logs-table [eventLogs]="eventLogs"></event-logs-table>
+  </div>
+</div>

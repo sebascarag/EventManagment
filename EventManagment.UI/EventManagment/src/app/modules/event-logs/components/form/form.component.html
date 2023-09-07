@@ -1,0 +1,35 @@
+<form class="row" (ngSubmit)="emitFormValues()">
+  <div class="mb-1">
+      <label for="date" class="col-form-label">Date</label>
+      <input type="datetime-local" name="name" [(ngModel)]="eventLog.date" class="form-control mb-2" aria-describedby="erroInline1">
+      <span id="erroInline1" class="form-text text-danger" *ngIf="getError('errorDate')">
+        * Date is required
+      </span>
+    </div>
+  <div class="mb-1">
+    <label for="description" class="col-form-label">Description</label>
+    <textarea type="text" name="address" [(ngModel)]="eventLog.description" class="form-control mb-2" aria-describedby="erroInline2"></textarea>
+    <span id="erroInline2" class="form-text text-danger" *ngIf="getError('errorDescriptionRequired')">
+      * Description is required
+    </span>
+    <span id="erroInline2" class="form-text text-danger" *ngIf="getError('errorDescriptionLong')">
+      * Description is very long, it must be less than 100 characters.
+    </span>
+  </div>
+  <!-- <div class="mb-4">
+    <label for="type" class="col-form-label">Type</label>
+    <select class="form-select" aria-label="select search-box" aria-describedby="erroInline3">
+      <option selected value="">-- Select --</option>
+      <option *ngFor="let item of optionsValues" value="{{item.value}}">{{item.option}}</option>
+    </select>
+    <span id="erroInline3" class="form-text text-danger" *ngIf="getError('errorEType')">
+      * Type is required
+    </span>
+  </div> -->
+  <br/>
+  <div class="col">
+    <button type="submit" class="btn btn-primary w-25 float-end" >Agregar</button>
+  </div>
+
+  <!-- <pre>{{ property | json }}</pre> -->
+</form>

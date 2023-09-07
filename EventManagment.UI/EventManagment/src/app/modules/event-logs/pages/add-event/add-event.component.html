@@ -1,0 +1,10 @@
+<h2>Add Event Log</h2>
+<hr>
+<div class="row">
+  <div class="col-8">
+    <event-logs-form (onNewEventLog)="saveEventLog($event)"></event-logs-form>
+    <span id="erroInline2" class="form-text text-danger" *ngIf="error">
+      * Description is very long, it must be less than 100 characters.
+    </span>
+  </div>
+</div>
