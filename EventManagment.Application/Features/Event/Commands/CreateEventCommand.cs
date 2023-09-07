@@ -21,7 +21,7 @@ namespace EventManagment.Application.Features.Event.Commands
             RuleFor(x => x.Date)
                 .NotEmpty();
             RuleFor(x => x.Description)
-                //.NotEmpty()
+                .NotEmpty()
                 .MaximumLength(100);
             RuleFor(x => x.EType)
                 .IsInEnum();
