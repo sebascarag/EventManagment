@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "EventManagment": {
+    "EventManagment.UI": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/event-managment",
+            "outputPath": "dist/event-managment.ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "EventManagment:build:production"
+              "browserTarget": "EventManagment.UI:build:production"
             },
             "development": {
-              "browserTarget": "EventManagment:build:development"
+              "browserTarget": "EventManagment.UI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "EventManagment:build"
+            "browserTarget": "EventManagment.UI:build"
           }
         },
         "test": {
